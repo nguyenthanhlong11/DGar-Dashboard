@@ -1,10 +1,12 @@
 <template>
   <div id="appadmin">
     <Sidebar/>
-    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+    <div class="w3-main" style="margin-left:300px">
        <div class="w3-row-padding w3-margin-bottom">
           <Header/>
-        <router-view></router-view>
+          <div class="container text-center"> 
+            <router-view></router-view>
+          </div>  
        </div>
         </div>
   </div>  

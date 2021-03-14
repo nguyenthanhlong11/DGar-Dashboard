@@ -4,7 +4,6 @@
   <title>D-Gar Group</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -16,6 +15,10 @@
   <!-- <link rel="stylesheet" href="public/css/adminPage.css"> -->
   <!-- <script src='Chart.min.js'></script> -->
   <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
   <style>
     /* Header css */
@@ -24,146 +27,53 @@
       font-family: Alegreya Sans;
       font-size: 17px;
     }
-    .header {
-      overflow: hidden;
-      background:#ccc;
-      padding: 20px 10px;
-    }
+    /* button download in sidebar */
+    .btn-download {
+  background-color:crimson;
+  margin-left: 60px;
+  margin-top: 100px;
+  border: none;
+  border-radius: 1px;
+  color: white;
+  cursor: pointer;
+  font-size: 25px;
+}
 
-    .header a {
-      float: left;
-      color: black;
-      text-align: center;
-      padding: 12px;
-      text-decoration: none;
-      font-size: 18px; 
-      line-height: 25px;
-      border-radius: 4px;
-    }
-    .header-right {
-      float: right;
-    }
+/* Darker background on mouse-over */
+.btn-download:hover {
+  background-color:darkred;
+}
+/* menu in dashboard */
+.main {
+    width: 50%;
+    margin: 50px auto;
+}
 
-    @media screen and (max-width: 500px) {
-      .header a {
-        float: none;
-        display: block;
-        text-align: left;
-      }
-      
-      .header-right {
-        float: none;
-      }
-    }
-        /* Seachbar */
-      .search-container {
-      float: right;
-    }
+/* Bootstrap 4 text input with search icon */
 
-      input[type=text] {
-      padding: 6px;
-      margin-top: 8px;
-      font-size: 17px;
-      border: none;
-    }
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
 
-    .search-container button {
-      float: right;
-      padding: 6px 10px;
-      margin-top: 8px;
-      margin-right: 16px;
-      background: #ddd;
-      font-size: 17px;
-      border: none;
-      cursor: pointer;
-    }
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
 
-    .search-container button:hover {
-      background: #ccc;
-    }
-    .row.content {height: 100%}
-    .sidenav {
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    @media screen and (max-width: 767px) {
-      .row.content {height: auto;} 
-    }
-    /* icon css */
-    .well i{
-      font-size: 40px;
-      color: #DCDCDC;
-    }
-    /* ... */
-    .well{
-      display: flex;
-      flex-wrap: wrap;
-      padding: 10px;
-      justify-content: space-between;
-    }
-
-    /* chart */
-    .tabcontent{
-      border-right: groove 1px;
-      border-bottom: groove 1px;
-    }
-    /* sidebar */
-    /* menu */
-    .dropbtn {
-      color: white;
-      width: auto;
-      font-size: 20px;
-      border: none;
-      color: black;
-      cursor: pointer;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      width: 250px;
-      background-color: #f9f9f9;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {background-color: #f1f1f1}
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-
-    /* piechart */
-    .piechart{
-      margin-left: 250px;
-    }
-    /* table */
-    .table{
-      text-align: center;
-    }
-    .table thead tr th{
-      text-align: center;
-    }
-    .table thead{
-      background: #00BFFF;
-    }
-    .table button{
-      border:none;
-    }
+.navbar-right .fa-bell{
+  margin-right: 300px;
+}
+.row .col-sm-4{
+  text-align: center;
+  padding: 20px;
+}
   </style>
 </head>
 <body class="w3-light-grey">
