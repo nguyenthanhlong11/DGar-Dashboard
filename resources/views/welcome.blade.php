@@ -72,7 +72,52 @@
 }
 .row .col-sm-4{
   text-align: center;
-  padding: 20px;
+  margin-bottom: 50px
+}
+
+.col-sm-4 i{
+  font-size:120px; 
+  display: inline-block;
+  padding-top: 50px;
+}
+
+.col-sm-4 p{
+  font-size: 25px;
+}
+
+.col-sm-4 h2{
+  font-size: 30px
+}
+.col-sm-4 .col1{
+  background-color:#FAE420; 
+  padding:30px; 
+  height: 350px;
+  border-style:solid; 
+  border-radius: 30px;
+  border-color: #FAE420;
+}
+.col-sm-4 .col2{
+  background-color: #ECADAD; 
+  padding:30px;
+  height: 350px;
+  border-style:solid; 
+  border-radius: 30px;
+  border-color: #ECADAD;
+}
+.col-sm-4 .col3{
+  background-color:#8EE3BA; 
+  padding:30px;
+  height: 350px;
+  border-style:solid; 
+  border-radius: 30px;
+  border-color: #8EE3BA;
+}
+
+.tabcontent{
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  background:white;
 }
   </style>
 </head>
