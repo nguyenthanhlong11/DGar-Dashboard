@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <nav class="navbar">
+<div>
+  <nav class="navbar">
     <div class="container-fluid">
       <div class="navbar-header">
         <h2>Hello Admin!</h2>
@@ -17,15 +17,15 @@
         </div>
       </div>
       <ul class="nav navbar-nav navbar-right">
-       <i class="fa fa-bell"></i>
-    </ul>
+        <i class="fa fa-bell"></i>
+      </ul>
     </div>
-</nav>
+  </nav>
 </div>
 </template>
 
 <script>
 export default {
-    
+
 }
 </script>

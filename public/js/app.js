@@ -1861,7 +1861,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -1891,6 +1890,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Content_LineChart__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Content/LineChart */ "./resources/js/components/Content/LineChart.vue");
+//
 //
 //
 //
@@ -57903,7 +57903,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", [_vm._v("Total cleaned")]),
           _vm._v(" "),
-          _c("h2", [_vm._v("38")])
+          _c("h2", [_vm._v("40")])
         ])
       ])
     ])
@@ -58044,7 +58044,7 @@ var render = function() {
                 },
                 [
                   _c("i", { staticClass: "fa fa-users" }),
-                  _vm._v("  Users Sacanner ")
+                  _vm._v(" Users Sacanner ")
                 ]
               ),
               _vm._v(" "),
@@ -58054,7 +58054,7 @@ var render = function() {
                   staticClass: "w3-bar-item w3-button w3-padding",
                   attrs: { to: { name: "" } }
                 },
-                [_c("i", { staticClass: "fa fa-file" }), _vm._v("  New Post ")]
+                [_c("i", { staticClass: "fa fa-file" }), _vm._v(" New Post ")]
               ),
               _vm._v(" "),
               _c(
@@ -58085,7 +58085,7 @@ var render = function() {
                   attrs: { to: { name: "" } }
                 },
                 [
-                  _c("i", { staticClass: "fa fa-sign-out" }),
+                  _c("i", { staticClass: "fas fa-sign-out-alt" }),
                   _vm._v(" Log out ")
                 ]
               )
@@ -58127,7 +58127,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "w3-col s8 w3-bar" }, [
-        _vm._v("\n         Welcome, "),
+        _vm._v("\r\n        Welcome, "),
         _c("strong", [_vm._v("Admin")]),
         _c("br"),
         _c("br")
