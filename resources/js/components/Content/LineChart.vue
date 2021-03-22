@@ -6,6 +6,9 @@ import {
 export default {
   extends: Line,
   mounted() {
+  axios.get('http://127.0.0.1:8000/api/countLocationByMonth').then(res=> {
+  const location = res.data;
+
     this.renderChart({
       labels: [
         "January",
@@ -23,7 +26,7 @@ export default {
       ],
       datasets: [{
         label: "Total",
-        data: [2, 10, 5, 9, 0, 6, 20, 34, 12, 66, 35, 42],
+        data: location,
         backgroundColor: "transparent",
         borderColor: "rgba(1, 116, 188, 0.50)",
         pointBackgroundColor: "rgba(171, 71, 188, 1)"
@@ -37,6 +40,7 @@ export default {
         fontSize: 50
       }
     });
+  })
   }
 };
 </script>

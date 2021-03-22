@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWarningsTable extends Migration
+class CreateHistoryReportsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateWarningsTable extends Migration
      */
     public function up()
     {
-        Schema::create('warnings', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('history_reports', function (Blueprint $table) {
+            $table->integer('id')->autoIncrement();
             $table->string('image');
-            $table->string('address');
-            $table->string('comments');
+            $table->string('location');
             $table->string('status');
-            $table->string('leves');
+            $table->string('severity');
+            $table->integer('contributorId');
+            $table->foreign('contributorId')->references('id')->on('profiles');
+            $table->timestamps();
         });
     }
 
@@ -30,6 +32,6 @@ class CreateWarningsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('warnings');
+        //
     }
 }

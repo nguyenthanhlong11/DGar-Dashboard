@@ -18,8 +18,8 @@
     <hr>
     <div class="w3-bar-block">
       <router-link :to="{ name: 'dashboard' }" class="w3-bar-item w3-button w3-padding"><i class="fa fa-home"></i>  Home </router-link>
-      <router-link :to="{ name: '' }" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users"></i> Users Sacanner </router-link>
-      <router-link :to="{ name: ''}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-file"></i> New Post </router-link>
+      <router-link :to="{ name: 'user-scanner' }" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users"></i> Users Scanner </router-link>
+      <router-link :to="{ name: 'new-post'}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-file"></i> New Post </router-link>
       <router-link :to="{ name: '' }" class="w3-bar-item w3-button w3-padding"><i class="fa fa-warning"></i> Warning </router-link>
       <router-link :to="{ name: '' }" class="w3-bar-item w3-button w3-padding"><i class="fa fa-info-circle"></i> Info </router-link>
       <router-link :to="{ name: '' }" class="w3-bar-item w3-button w3-padding"><i class="fas fa-sign-out-alt"></i> Log out </router-link>

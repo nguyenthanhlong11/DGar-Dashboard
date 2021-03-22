@@ -119,6 +119,77 @@
   border-radius: 5px;
   background:white;
 }
+
+.containerUS{
+  padding: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 35px;
+  background-color: #DDE7E4;
+  border-color:#DDE7E4;
+}
+.containerUS i{
+margin-right: 5px;
+}
+.containerUS table{
+  text-align:left;
+
+}
+
+.containerUS .fa-trash{
+  color:#aaa;
+}
+.containerUS .form-row .col-sm-2{
+  height:20px;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+.containerUS .form-row .col-sm-10 input{
+  height:45px;
+}
+.containerUS .col-sm-12{
+  margin-top:30px;
+  margin-bottom:30px;
+}
+.containerUS .form-row .col-sm-2 label{
+  display: block;
+	margin: 0 auto;
+	border-style: solid;
+  border-color:#aaa;
+  border-radius: 25px;
+  border-width: 1px;
+	font-size: 12px;;
+	line-height: 2.5em;
+  color:#aaa;
+}
+.containerUS .form-row .col-sm-2 label:hover {
+	color:dimgray;
+}
+
+.containerUS .form-row .col-sm-2 label:active {
+	background-color: mediumaquamarine;
+}
+.btn-link{
+  color:red;
+}
+
+.containerUS .col-sm-2 input {
+	border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px; 
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.containerUS .form-row2{
+  text-align: left;
+  margin-bottom:30px;
+  font-size:20px;
+}
+
   </style>
 </head>
 <body class="w3-light-grey">
