@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBinLocationsTable extends Migration
+class CreateNotifyTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateBinLocationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('bin_locations', function (Blueprint $table) {
+        Schema::create('notify_types', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('title');
-            $table->string('longitude');
-            $table->string('latitude');
+            $table->string('type_name');
+            $table->string('image')->default('null');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateBinLocationsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('notify_types');
     }
 }
