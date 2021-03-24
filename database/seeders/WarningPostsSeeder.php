@@ -15,7 +15,7 @@ class WarningPostsSeeder extends Seeder
     {
         DB::table("warning_posts")->insert(
             [
-            'account_id'=>'2',
+            'user_id'=>'2',
             'address'=>'99 To Hien Thanh, Da Nang',
             'level'=>'low',
             'image'=>'null',
@@ -23,7 +23,7 @@ class WarningPostsSeeder extends Seeder
             'status'=>'no clean'
             ],
             [
-            'account_id'=>'2',
+            'user_id'=>'2',
             'address'=>'99 To Hien Thanh, Da Nang',
             'level'=>'low',
             'image'=>'null',

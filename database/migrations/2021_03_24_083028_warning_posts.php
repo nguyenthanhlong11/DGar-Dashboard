@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWarningPostsTable extends Migration
+class WarningPosts extends Migration
 {
     /**
      * Run the migrations.
@@ -15,14 +15,14 @@ class CreateWarningPostsTable extends Migration
     {
         Schema::create('warning_posts', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->unsignedBigInteger("account_id");
+            $table->unsignedBigInteger("user_id");
             $table->string('address');
             $table->string('level');
             $table->string("image")->default(null);
             $table->string('description');
             $table->string('status');
             $table->timestamps();
-            $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

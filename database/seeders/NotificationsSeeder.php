@@ -14,20 +14,20 @@ class NotificationsSeeder extends Seeder
     public function run()
     {
         DB::table("notifications")->insert([
-            'account_id'=>1,
-            'type_id'=>3,
+            'user_id'=>1,
+            'notify_type_id'=>1,
             'content'=>'That is good day, you can make the pink life',
             'note'=>'null',
             ]);
             DB::table("notifications")->insert([
-            'account_id'=>1,
-            'type_id'=>2,
+            'user_id'=>1,
+            'notify_type_id'=>2,
             'content'=>'That is amazing',
             'note'=>'null',
             ]);
             DB::table("notifications")->insert([
-            'account_id'=>1,
-            'type_id'=>5,
+            'user_id'=>1,
+            'notify_type_id'=>3,
             'content'=>'Good job, unbelievable',
             'note'=>'null',
             ]);

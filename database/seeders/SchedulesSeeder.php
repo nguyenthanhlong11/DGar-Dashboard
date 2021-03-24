@@ -15,7 +15,7 @@ class SchedulesSeeder extends Seeder
     public function run()
     {
         DB::table("schedules")->insert([
-            'account_id'=>1,
+            'user_id'=>1,
             'post_id'=>1,
             'start_day'=>'23/02/2021',
             'end_day'=>'25/03/2021',

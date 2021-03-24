@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNotifyTypesTable extends Migration
+class SharingPosts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateNotifyTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('notify_types', function (Blueprint $table) {
+        Schema::create('sharing_posts', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('type_name');
-            $table->string('image')->default('null');
+            $table->unsignedBigInteger("user_id");
+            $table->string('address');
+            $table->string('content');
+            $table->string('image')->default("null");
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');;
         });
     }
 
@@ -28,6 +31,6 @@ class CreateNotifyTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notify_types');
+        Schema::dropIfExists('sharing_posts');
     }
 }
