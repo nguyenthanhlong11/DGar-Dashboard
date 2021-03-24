@@ -21,7 +21,7 @@ class NotificationsSeeder extends Seeder
             ]);
             DB::table("notifications")->insert([
             'account_id'=>1,
-            'type_id'=>4,
+            'type_id'=>2,
             'content'=>'That is amazing',
             'note'=>'null',
             ]);
