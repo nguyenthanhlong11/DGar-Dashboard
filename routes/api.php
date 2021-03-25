@@ -23,7 +23,7 @@ use App\Http\Controllers\User\ProfileControler;
 // Route::get('/listUser', 'App\Http\Controllers\UserController@getList');
 // Route::get('/listProfile', 'App\Http\Controllers\UserController@getList');
 // Route::get('/listHistoryReport', 'App\Http\Controllers\HistoryReportController@getList');
-// Route::get('/listBinLocation', 'App\Http\Controllers\BinLocationController@getList');
+Route::get('/listBinLocation', 'App\Http\Controllers\BinLocationController@getList');
 
 // Route::get('/countLocationByMonth', 'App\Http\Controllers\HistoryReportController@getLocationHandled');
 Route::post("/auth/signin",[LoginController::class,"login"]);
