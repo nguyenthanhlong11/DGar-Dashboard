@@ -15,7 +15,7 @@ class CreateBinLocationsTable extends Migration
     {
         Schema::create('bin_locations', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('title');
+            $table->string('name');
             $table->string('longitude');
             $table->string('latitude');
             $table->timestamps();
