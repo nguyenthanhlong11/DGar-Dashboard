@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Notifications extends Migration
+class CreateWarningPostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,16 @@ class Notifications extends Migration
      */
     public function up()
     {
-         Schema::create('notifications', function (Blueprint $table) {
+        Schema::create('warning_posts', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->unsignedBigInteger("user_id");
-            $table->unsignedBigInteger("notify_type_id");
-            $table->string('content');
-            $table->string('note');
+            $table->string('address');
+            $table->string('level');
+            $table->string("image")->default(null);
+            $table->string('description');
+            $table->string('status');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('notify_type_id')->references('id')->on('notify_types')->onDelete('cascade');
         });
     }
 
@@ -32,6 +33,6 @@ class Notifications extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sharing_posts');
+        Schema::dropIfExists('warning_posts');
     }
 }
