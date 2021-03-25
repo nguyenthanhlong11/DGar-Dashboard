@@ -6,3 +6,4 @@
 - php artisan migrate:fresh --seed 
 - php artisan serve
 - npm run watch
+- composer require firebase/php-jwt)(thư viện mã hóa)
