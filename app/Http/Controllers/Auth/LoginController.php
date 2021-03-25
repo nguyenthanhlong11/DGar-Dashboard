@@ -17,12 +17,12 @@ class LoginController extends Controller
             $user_id=$user->id;
             $key="minionroo";
 
-            // $data = array(
-            //     "user_id"=>$user_id
-            // ) ;                 
-            // $token= JWT::encode($data, $key);
-            // $a=JWT::decode($token, $key);
-            $responData=array("user_id"=>$user_id);
+            $data = array(
+                "user_id"=>$user_id
+            ) ;                 
+            $token= JWT::encode($data, $key);
+           // $a=JWT::decode($token, $key);
+            $responData=array("user_id"=>$token);
             return response()->json($responData,200);
         }
         else{
