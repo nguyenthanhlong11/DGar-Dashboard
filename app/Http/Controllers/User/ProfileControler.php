@@ -10,7 +10,7 @@ use \Firebase\JWT\JWT;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-class ProfileController extends Controller
+class ProfileControler extends Controller
 {
     function getProfile()
     {

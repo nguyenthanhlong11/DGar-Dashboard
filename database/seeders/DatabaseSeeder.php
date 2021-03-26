@@ -20,6 +20,5 @@ class DatabaseSeeder extends Seeder
         $this->call(NotifyTypesSeeder::class);
         $this->call(SchedulesSeeder::class);
         $this->call(NotificationsSeeder::class);
-        $this->call(BinLocationSeeder::class);
     }
 }

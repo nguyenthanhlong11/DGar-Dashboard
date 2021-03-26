@@ -1,9 +1,9 @@
 <?php
 
 namespace Database\Seeders;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Seeder;
 
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 class BinLocationSeeder extends Seeder
 {
     /**
@@ -88,6 +88,5 @@ class BinLocationSeeder extends Seeder
             'latitude'=> '16.059548',
             'longitude'=> '108.24328']
         );
-            
     }
 }
