@@ -20,33 +20,38 @@ class RegisterController extends Controller
         $address = $request->address;
 
         $hashPassword=Hash::make($password);
+        $user = User::where('email', $email)->first();
+        if($user==null){
+            $user = new User();
+            $user->email=$email;
+            $user->password=$hashPassword;
+            $user->save();
 
-        $user = new User();
-        $user->email=$email;
-        $user->password=$hashPassword;
-        $user->save();
-
-        $inforUser = new UserInformation();
-        $inforUser->user_id=$user->id;
-        $inforUser->name=$name;
-        $inforUser->address=$address;
-        $inforUser->save();
+            $inforUser = new UserInformation();
+            $inforUser->user_id=$user->id;
+            $inforUser->name=$name;
+            $inforUser->address=$address;
+            $inforUser->save();
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
             $user_id=$user->id;
-            // $key="minionroo";
+            $key="minionroo";
 
-            // $data = array(
-            //     "user_id"=>$user_id
-            // ) ;
-            // $token= JWT::encode($data, $key);
-            $responData=array("user_id"=>$user_id);
+            $data = array(
+                "user_id"=>$user_id
+            ) ;
+            $token= JWT::encode($data, $key);
+            $responData=array("user_id"=>$token);
             return response()->json($responData,200);
         }
         else{
          return 400;
       }
+        }
+        else 
+        {return response()->json("Email is exits!",400);}
+      
     }
 }
