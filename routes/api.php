@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\User\ProfileControler;
+use App\Http\Controllers\User\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,5 +28,5 @@ Route::get('/listBinLocation', 'App\Http\Controllers\BinLocationController@getLi
 // Route::get('/countLocationByMonth', 'App\Http\Controllers\HistoryReportController@getLocationHandled');
 Route::post("/auth/signin",[LoginController::class,"login"]);
 Route::post("/auth/signup",[RegisterController::class,"store"]);
-Route::get("/user/getProfile",[ProfileControler::class,"getProfile"]);
-Route::post("/user/changePassword",[ProfileControler::class,"checkPassword"]);
+Route::get("/user/getProfile",[ProfileController::class,"getProfile"]);
+Route::post("/user/changePassword",[ProfileController::class,"checkPassword"]);
