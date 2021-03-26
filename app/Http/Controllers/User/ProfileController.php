@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\USer;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -10,7 +10,7 @@ use \Firebase\JWT\JWT;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-class ProfileControler extends Controller
+class ProfileController extends Controller
 {
     function getProfile()
     {
