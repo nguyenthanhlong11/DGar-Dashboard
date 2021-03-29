@@ -11,4 +11,9 @@ class BinLocationController extends Controller
         $bin = BinLocation::all();
         return $bin;
     }
+
+    public function viewTrash($id){
+        $bin = BinLocation::find($id);
+        return $bin;
+    }
 }

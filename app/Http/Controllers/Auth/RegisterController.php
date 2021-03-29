@@ -10,10 +10,20 @@ use App\Models\UserInformation;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use \Firebase\JWT\JWT;
+use Validator;
 class RegisterController extends Controller
 {
     function store(Request $request){
+        $validator = Validator::make($request->all(), [
+            'email' => 'sometimes|required|email|unique:users',
+            'password' => 'required',
+            'name' => 'required',
+            'address' => 'required',
+        ]);
 
+        if ($validator->fails()) {
+            return response()->json($validator->errors());
+        }
         $email = $request->email;
         $password = $request->password;
         $name = $request->name;
@@ -25,13 +35,10 @@ class RegisterController extends Controller
             $user = new User();
             $user->email=$email;
             $user->password=$hashPassword;
+            $user->name=$name;
+            $user->address=$address;
+            $user->role="user";
             $user->save();
-
-            $inforUser = new UserInformation();
-            $inforUser->user_id=$user->id;
-            $inforUser->name=$name;
-            $inforUser->address=$address;
-            $inforUser->save();
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
@@ -42,7 +49,8 @@ class RegisterController extends Controller
             $data = array(
                 "user_id"=>$user_id
             ) ;
-            $token= JWT::encode($data, $key);
+            // $token= JWT::encode($data, $key);
+            $token=md5($user_id);
             $responData=array("user_id"=>$token);
             return response()->json($responData,200);
         }

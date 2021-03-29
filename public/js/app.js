@@ -1924,7 +1924,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -2036,6 +2035,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -2061,31 +2062,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      users: []
+    };
+  },
+  mounted: function mounted() {
+    this.getUser();
+  },
+  methods: {
+    getUser: function getUser() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://127.0.0.1:8000/api/users/countPosts').then(function (response) {
+        return _this.users = response.data;
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -58133,12 +58131,7 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-sm-12" }, [
-        _c(
-          "div",
-          { staticClass: "tabcontent", attrs: { id: "monthly" } },
-          [_c("LineChart")],
-          1
-        )
+        _c("div", { staticClass: "tabcontent" }, [_c("LineChart")], 1)
       ])
     ])
   ])
@@ -58175,7 +58168,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", [_vm._v("Total cleaned")]),
           _vm._v(" "),
-          _c("h2", [_vm._v("40")])
+          _c("h2", [_vm._v("38")])
         ])
       ])
     ])
@@ -58301,106 +58294,64 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("div", { staticClass: "containerUS" }, [
+      _c("table", { staticClass: "table" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "tbody",
+          _vm._l(_vm.users, function(users) {
+            return _c("tr", { key: users }, [
+              _c("td", [
+                _c("i", { staticClass: "fas fa-user-circle" }),
+                _vm._v(_vm._s(users.name))
+              ]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(users.email))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(users.total_posts))]),
+              _vm._v(" "),
+              _vm._m(1, true)
+            ])
+          }),
+          0
+        )
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "containerUS" }, [
-        _c("table", { staticClass: "table" }, [
-          _c("thead", [
-            _c("tr", [
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Name")]),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Email")]),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Total Post")]),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-outline-danger",
-                    attrs: { type: "button" }
-                  },
-                  [_vm._v("Delete")]
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tbody", [
-            _c("tr", [
-              _c("td", [
-                _c("i", { staticClass: "fas fa-user-circle" }),
-                _vm._v("Thanh Long")
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("long@gmail.com")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("12")]),
-              _vm._v(" "),
-              _c("td", [_c("i", { staticClass: "fas fa-trash" })])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [
-                _c("i", { staticClass: "fas fa-user-circle" }),
-                _vm._v("Mai Ho")
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("mai@gmail.com")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("1")]),
-              _vm._v(" "),
-              _c("td", [_c("i", { staticClass: "fas fa-trash" })])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [
-                _c("i", { staticClass: "fas fa-user-circle" }),
-                _vm._v("Manh Nguyen")
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("manh@gmail.com")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("0")]),
-              _vm._v(" "),
-              _c("td", [_c("i", { staticClass: "fas fa-trash" })])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [
-                _c("i", { staticClass: "fas fa-user-circle" }),
-                _vm._v("Nguyet Nguyen")
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("nguyet@gmail.com")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("5")]),
-              _vm._v(" "),
-              _c("td", [_c("i", { staticClass: "fas fa-trash" })])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [
-                _c("i", { staticClass: "fas fa-user-circle" }),
-                _vm._v("Van Mai")
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("van@gmail.com")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("8")]),
-              _vm._v(" "),
-              _c("td", [_c("i", { staticClass: "fas fa-trash" })])
-            ])
-          ])
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Name")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Email")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Total Post")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-outline-danger",
+              attrs: { type: "button" }
+            },
+            [_vm._v("Delete")]
+          )
         ])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("i", { staticClass: "fas fa-trash" })])
   }
 ]
 render._withStripped = true
