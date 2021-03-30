@@ -31,9 +31,9 @@ class LoginController extends Controller
                 "user_id"=>$user_id
             ) ;                 
             // $token= JWT::encode($data, $key);
-            // $token=md5($user_id);
+            $token=md5($user_id);
            // $a=JWT::decode($token, $key);
-            $responData=array("user_id"=>$user_id);
+            $responData=array("user_id"=>$token);
             return response()->json($responData,200);
         }
         else{
