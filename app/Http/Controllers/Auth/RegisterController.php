@@ -15,7 +15,7 @@ class RegisterController extends Controller
 {
     function store(Request $request){
         $validator = Validator::make($request->all(), [
-            'email' => 'required',
+            'email' => 'sometimes|required|email|unique:users',
             'password' => 'required',
             'name' => 'required',
             'address' => 'required',
