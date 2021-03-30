@@ -1951,7 +1951,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('http://127.0.0.1:8000/api/countLocationByMonth').then(function (res) {
+    axios.get('http://127.0.0.1:8000/api/reports/getPostMonth').then(function (res) {
       var location = res.data;
 
       _this.renderChart({

@@ -38,4 +38,18 @@ class WarningPostController extends Controller
         $post->delete();
         return "deleted!";
     }
+
+    public function getPostMonth(){
+        $post = WarningPost::select(WarningPost::raw('MONTH(created_at) as month'),WarningPost ::raw('COUNT(id) as sum'))
+        ->groupBy('month')->get();
+        $post_month=[0,0,0,0,0,0,0,0,0,0,0,0];
+        foreach($post as $post){
+        for($i=1;$i<=12;$i++){
+          if($i==$post["month"]){
+            $post_month[$i-1]=$post["sum"];
+          }
+        }
+        }  
+        return $post_month;
+    } 
 }

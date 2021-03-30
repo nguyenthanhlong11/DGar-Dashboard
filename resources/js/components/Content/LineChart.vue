@@ -6,7 +6,7 @@ import {
 export default {
   extends: Line,
   mounted() {
-  axios.get('http://127.0.0.1:8000/api/countLocationByMonth').then(res=> {
+  axios.get('http://127.0.0.1:8000/api/reports/getPostMonth').then(res=> {
   const location = res.data;
 
     this.renderChart({

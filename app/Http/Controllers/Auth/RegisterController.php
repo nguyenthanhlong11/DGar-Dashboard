@@ -49,9 +49,7 @@ class RegisterController extends Controller
             $data = array(
                 "user_id"=>$user_id
             ) ;
-            // $token= JWT::encode($data, $key);
-            $token=md5($user_id);
-            $responData=array("user_id"=>$token);
+            $responData=array("user_id"=>$user_id);
             return response()->json($responData,200);
         }
         else{

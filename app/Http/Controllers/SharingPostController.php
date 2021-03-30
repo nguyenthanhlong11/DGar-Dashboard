@@ -21,9 +21,9 @@ class SharingPostController extends Controller
        
     }
 
-    public function addPost(Request $request){   
+    public function addPost(Request $request, $id){   
         $post =new SharingPost();
-        $post->user_id=1;
+        $post->user_id=$id;
         $post->address=$request->address;
         $post->content=$request->content;
         $post->image=$request->image;

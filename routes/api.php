@@ -61,6 +61,8 @@ Route::get("/reports/getListPosts",[WarningPostController::class,"getList"]);
 Route::get("/reports/viewPosts/{id}",[WarningPostController::class,"viewPost"]);
 Route::post("/reports/addPost",[WarningPostController::class,"addPost"]);
 Route::delete("/reports/deletePost/{id}",[WarningPostController::class,"deletePost"]);
+Route::get("/reports/getPostMonth",[WarningPostController::class,"getPostMonth"]);
+
 
 // Notifications
 Route::get("/notifications/getListNotifications",[NotificationController::class,"getList"]);
