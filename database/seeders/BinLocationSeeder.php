@@ -88,5 +88,15 @@ class BinLocationSeeder extends Seeder
             'latitude'=> '16.059548',
             'longitude'=> '108.24328']
         );
+        DB::table("bin_locations")->insert(
+            ['name'=>'51 Ha Thi Than',
+            'latitude'=> '16.059328',
+            'longitude'=> '108.24165']
+        );
+        DB::table("bin_locations")->insert(
+            ['name'=>'30 Hung Vuong',
+            'latitude'=> '16.059365',
+            'longitude'=> '108.24487']
+        );
     }
 }

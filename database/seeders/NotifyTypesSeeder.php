@@ -16,12 +16,17 @@ class NotifyTypesSeeder extends Seeder
         DB::table("notify_types")->insert([
             'type_name'=>'news',
             ]);
-            DB::table("notify_types")->insert( [
+        DB::table("notify_types")->insert( [
             'type_name'=>'event',
             ]);
-            DB::table("notify_types")->insert([
+        DB::table("notify_types")->insert([
             'type_name'=>'community',
-        ]);
-            
+            ]);
+        DB::table("notify_types")->insert([
+            'type_name'=>'clear_trash',
+            ]);
+        DB::table("notify_types")->insert([
+            'type_name'=>'bonus_point',
+            ]);
     }
 }

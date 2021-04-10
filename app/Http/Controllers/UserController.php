@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Users;
 use App\Models\WarningPost;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -27,6 +29,7 @@ class UserController extends Controller
         $user->name=$request->name;
         $user->image=$request->image;
         $user->address=$request->address;
+        $user->save();
         return $user;
     }
 
@@ -36,5 +39,26 @@ class UserController extends Controller
         ->select('users.name', 'users.email', WarningPost::raw('COUNT(user_id) as total_posts'))
         ->get();
         return $users;
-    }   
+    }
+    
+    function changePassword(Request $request)
+   {
+       $user_id = $request->id;
+       $oldPass = $request->oldPass;
+       $newPass = $request->newPass;
+       $hasPass = Hash::make($newPass);
+       $user = Users::find($user_id);
+
+       $check = array(
+           "email"=>$user->email,
+           "password"=>$oldPass
+       );
+       if (Auth::attempt($check)) {
+        Users::where('id',$user_id)->update(['password'=>$hasPass]);
+       return 200;
+       } else {
+           return 400;
+       }
+  //  return $user;
+   }
 }

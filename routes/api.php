@@ -35,13 +35,15 @@ Route::post("/auth/signin",[LoginController::class,"login"]);
 Route::post("/auth/signup",[RegisterController::class,"store"]);
 Route::post("/auth/logout",[LoginController::class,"logout"]);
 Route::get("/user/getProfile",[ProfileController::class,"getProfile"]);
-Route::post("/user/changePassword",[ProfileController::class,"checkPassword"]);
+// Route::post("/user/changePassword",[ProfileController::class,"checkPassword"]);
 
 // Users
 Route::get("/users/getListUser",[UserController::class,"getList"]);
 Route::get("/users/viewProfile/{id}",[UserController::class,"viewProfile"]);
 Route::get("/users/editProfile/{id}",[UserController::class,"editProfile"]);
 Route::post("/users/editProfile/{id}",[UserController::class,"updateProfile"]);
+Route::post("/users/changePassword/{id}",[UserController::class,"changePassword"]);
+
 
 // --countPosts
 Route::get("/users/countPosts",[UserController::class,"countPosts"]);
