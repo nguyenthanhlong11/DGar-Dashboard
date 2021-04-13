@@ -13,7 +13,7 @@ class LoginController extends Controller
 {
     public function login(Request $request){
         $validator = Validator::make($request->all(), [
-            'email' => 'required',
+            'username' => 'required',
             'password' => 'required',
         ]);
     
@@ -21,7 +21,7 @@ class LoginController extends Controller
         {
             return response()->json($validator->errors());
         }
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('username', 'password');
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
             $user_id=$user->id;

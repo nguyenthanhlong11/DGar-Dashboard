@@ -50,15 +50,17 @@ class UserController extends Controller
        $user = Users::find($user_id);
 
        $check = array(
-           "email"=>$user->email,
+           "username"=>$user->username,
            "password"=>$oldPass
        );
        if (Auth::attempt($check)) {
-        Users::where('id',$user_id)->update(['password'=>$hasPass]);
+        // Users::where('id',$user_id)->update(['password'=>$hasPass]);
+        $user->password=$hasPass;
+        $user->save();
        return 200;
        } else {
            return 400;
        }
-  //  return $user;
+//    return $check;
    }
 }
