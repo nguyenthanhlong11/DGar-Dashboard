@@ -8,7 +8,11 @@ use App\Models\Notification;
 class NotificationController extends Controller
 {
     public function getList(){
-        $notifications = Notification::all();
+        $notifications = DB::table('notifications')
+        ->join('users','notifications.id','=','users.id')
+        ->join('notify_types','notifications.id','=','notify_types.id')
+        ->select('users.name','users.image','notify_types.name','notify_types.image','notifications.*')
+        ->get();
         return $notifications;
     }
 
