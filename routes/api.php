@@ -41,7 +41,7 @@ Route::get("/user/getProfile",[ProfileController::class,"getProfile"]);
 Route::get("/users/getListUser",[UserController::class,"getList"]);
 Route::get("/users/viewProfile/{id}",[UserController::class,"viewProfile"]);
 Route::get("/users/editProfile/{id}",[UserController::class,"editProfile"]);
-Route::post("/users/editProfile/{id}",[UserController::class,"updateProfile"]);
+Route::post("/users/updateProfile/{id}",[UserController::class,"updateProfile"]);
 Route::post("/users/changePassword/{id}",[UserController::class,"changePassword"]);
 
 
