@@ -9,7 +9,10 @@ class SharingPostController extends Controller
 {
     public function getList()
     {
-        $posts=SharingPost::all();
+        $posts = DB::table('sharing_posts')
+        ->join('users','sharing_posts.id','=','users.id')
+        ->select('users.name','users.image','sharing_posts.*')
+        ->get();
         return $posts;
        
     }
