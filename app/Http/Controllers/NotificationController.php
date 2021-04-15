@@ -13,7 +13,7 @@ class NotificationController extends Controller
     }
 
     public function viewNotification($id){
-        $notification = Notification::find($id);
+        $notification = Notification::where('user_id',$id)->get();
         return $notification;
     }
 
