@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\SharingPost;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class SharingPostController extends Controller
