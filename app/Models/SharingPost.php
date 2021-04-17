@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class SharingPost extends Model
 {
     use HasFactory;
-    protected $table ="sharing_posts";
+    protected $table = "sharing_posts";
 }

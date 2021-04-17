@@ -1,8 +1,9 @@
 <?php
 
 namespace Database\Seeders;
-use Illuminate\Support\Facades\DB;
+
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class UserSeeder extends Seeder
 {
@@ -15,43 +16,43 @@ class UserSeeder extends Seeder
     {
         DB::table("users")->insert(
             [
-                'email'=>'mian@gmail.com',
-                'username'=>'user1',
-                'password'=>bcrypt("user123"),
-                'name'=>'Mian Mai',
-                'address'=>'101b Le Huu Trac, Da Nang',
-                'image'=>'null',
-                'role'=>'user'
+                'email' => 'mian@gmail.com',
+                'username' => 'user1',
+                'password' => bcrypt("user123"),
+                'name' => 'Mian Mai',
+                'address' => '101b Le Huu Trac, Da Nang',
+                'image' => 'null',
+                'role' => 'user',
             ]);
-            DB::table("users")->insert(
+        DB::table("users")->insert(
             [
-                'email'=>'miancloud@gmail.com',
-                'username'=>'user2',
-                'password'=>bcrypt("admin123"),
-                'name'=>'Mian Mai',
-                'address'=>'101b Le Huu Trac, Da Nang',
-                'image'=>'null',
-                'role'=>'admin'
-            ]); 
-            DB::table("users")->insert(
-            [
-                'email'=>'user@gmail.com',
-                'username'=>'user3',
-                'password'=>bcrypt("user123"),
-                'name'=>'Mian Mai',
-                'address'=>'101b Le Huu Trac, Da Nang',
-                'image'=>'null',
-                'role'=>'user'
+                'email' => 'miancloud@gmail.com',
+                'username' => 'user2',
+                'password' => bcrypt("admin123"),
+                'name' => 'Mian Mai',
+                'address' => '101b Le Huu Trac, Da Nang',
+                'image' => 'null',
+                'role' => 'admin',
             ]);
-            DB::table("users")->insert(
+        DB::table("users")->insert(
             [
-                'email'=>'long@gmail.com',
-                'username'=>'user4',
-                'password'=>bcrypt("user123"),
-                'name'=>'Thanh Long',
-                'address'=>'101b Le Huu Trac, Da Nang',
-                'image'=>'long.png',
-                'role'=>'user'
+                'email' => 'user@gmail.com',
+                'username' => 'user3',
+                'password' => bcrypt("user123"),
+                'name' => 'Mian Mai',
+                'address' => '101b Le Huu Trac, Da Nang',
+                'image' => 'null',
+                'role' => 'user',
+            ]);
+        DB::table("users")->insert(
+            [
+                'email' => 'long@gmail.com',
+                'username' => 'user4',
+                'password' => bcrypt("user123"),
+                'name' => 'Thanh Long',
+                'address' => '101b Le Huu Trac, Da Nang',
+                'image' => 'long.png',
+                'role' => 'user',
             ]);
     }
 }

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+
 class BinLocationSeeder extends Seeder
 {
     /**
@@ -14,89 +15,115 @@ class BinLocationSeeder extends Seeder
     public function run()
     {
         DB::table("bin_locations")->insert(
-            ['name'=>'An Thuong 40 street',
-            'latitude'=> '16.0501',
-            'longitude'=> '108.2438']
+            ['name' => 'An Thuong 40 street',
+                'latitude' => '16.0501',
+                'longitude' => '108.2438']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'University of Economics - The University of Danang',
-            'latitude'=> '16.04694956',
-            'longitude'=> '108.23929']
+            ['name' => 'University of Economics - The University of Danang',
+                'latitude' => '16.04694956',
+                'longitude' => '108.23929']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'Hoang Ke Viem street',
-            'latitude'=> '16.0488',
-            'longitude'=> '108.2434']
+            ['name' => 'Hoang Ke Viem street',
+                'latitude' => '16.0488',
+                'longitude' => '108.2434']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'A Bin Sea Food',
-            'latitude'=> '16.0484',
-            'longitude'=> '108.2432']
+            ['name' => 'A Bin Sea Food',
+                'latitude' => '16.0484',
+                'longitude' => '108.2432']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'Tran Thi Ly Bridge',
-            'latitude'=> '16.0503',
-            'longitude'=> '108.2294']
+            ['name' => 'Tran Thi Ly Bridge',
+                'latitude' => '16.0503',
+                'longitude' => '108.2294']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'Bin',
-            'latitude'=> '16.060971',
-            'longitude'=> '108.241754']
+            ['name' => 'Bin',
+                'latitude' => '16.060971',
+                'longitude' => '108.241754']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'Dragon Bridge',
-            'latitude'=> '16.06145',
-            'longitude'=> '108.231388']
+            ['name' => 'Dragon Bridge',
+                'latitude' => '16.06145',
+                'longitude' => '108.231388']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'Han River Bridge',
-            'latitude'=> '16.07238',
-            'longitude'=> '108.22892']
+            ['name' => 'Han River Bridge',
+                'latitude' => '16.07238',
+                'longitude' => '108.22892']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'Pham Viet Chanh Street',
-            'latitude'=> '16.015367',
-            'longitude'=> '108.196236']
+            ['name' => 'Pham Viet Chanh Street',
+                'latitude' => '16.015367',
+                'longitude' => '108.196236']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'DA NANG Vocational College',
-            'latitude'=> '16.0599',
-            'longitude'=> '108.2438']
+            ['name' => 'DA NANG Vocational College',
+                'latitude' => '16.0599',
+                'longitude' => '108.2438']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'Landfills 1',
-            'latitude'=> '16.061394',
-            'longitude'=> '108.240503']
+            ['name' => 'Landfills 1',
+                'latitude' => '16.061394',
+                'longitude' => '108.240503']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'Landfills 2',
-            'latitude'=> '16.059099',
-            'longitude'=> '108.2426']
+            ['name' => 'Landfills 2',
+                'latitude' => '16.059099',
+                'longitude' => '108.2426']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'Hoang Hoa Tham High School',
-            'latitude'=> '16.058043',
-            'longitude'=> '108.2372']
+            ['name' => 'Hoang Hoa Tham High School',
+                'latitude' => '16.058043',
+                'longitude' => '108.2372']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'My Khe Beach',
-            'latitude'=> '16.063981',
-            'longitude'=> '108.246385']
+            ['name' => 'My Khe Beach',
+                'latitude' => '16.063981',
+                'longitude' => '108.246385']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'150 To Hien Thanh',
-            'latitude'=> '16.059548',
-            'longitude'=> '108.24328']
+            ['name' => '150 To Hien Thanh',
+                'latitude' => '16.059548',
+                'longitude' => '108.24328']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'51 Ha Thi Than',
-            'latitude'=> '16.059328',
-            'longitude'=> '108.24165']
+            ['name' => '51 Ha Thi Than',
+                'latitude' => '16.059328',
+                'longitude' => '108.24165']
         );
         DB::table("bin_locations")->insert(
-            ['name'=>'30 Hung Vuong',
-            'latitude'=> '16.059365',
-            'longitude'=> '108.24487']
+            ['name' => '30 Hung Vuong',
+                'latitude' => '16.059365',
+                'longitude' => '108.24487']
         );
+        DB::table("bin_locations")->insert(
+            ['name' => 'Tho Quan',
+                'latitude' => '16.118069',
+                'longitude' => '108.273956']
+        );
+        DB::table("bin_locations")->insert(
+            ['name' => 'Hai Chau',
+                'latitude' => '16.047199',
+                'longitude' => '108.219955']
+        );
+        DB::table("bin_locations")->insert(
+            ['name' => 'Muong Thanh',
+                'latitude' => '16.05388789464183',
+                'longitude' => '108.24735968076834']
+        );
+        DB::table("bin_locations")->insert(
+            ['name' => 'THPT Le Quy Don',
+                'latitude' => '16.057579002390433,',
+                'longitude' => '108.23340884236994']
+        );
+        DB::table("bin_locations")->insert(
+            ['name' => 'Địa điểm X',
+                'latitude' => '16.06243409646165,',
+                'longitude' => '108.2397247418874']
+        ); 
+    
     }
 }

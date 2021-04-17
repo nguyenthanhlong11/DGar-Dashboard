@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+
 class WarningPostsSeeder extends Seeder
 {
     /**
@@ -15,22 +16,22 @@ class WarningPostsSeeder extends Seeder
     {
         DB::table("warning_posts")->insert(
             [
-            'user_id'=>'2',
-            'address'=>'99 To Hien Thanh, Da Nang',
-            'level'=>'low',
-            'image'=>'null',
-            'description'=>'Joining hands for a green, clean and beautiful environment',
-            'status'=>'no clean'
+                'user_id' => '2',
+                'address' => '99 To Hien Thanh, Da Nang',
+                'level' => 'low',
+                'image' => 'null',
+                'description' => 'Joining hands for a green, clean and beautiful environment',
+                'status' => 'no clean',
             ],
             [
-            'user_id'=>'2',
-            'address'=>'99 To Hien Thanh, Da Nang',
-            'level'=>'low',
-            'image'=>'null',
-            'description'=>'Joining hands for a green, clean and beautiful environment',
-            'status'=>'no clean'
+                'user_id' => '2',
+                'address' => '99 To Hien Thanh, Da Nang',
+                'level' => 'low',
+                'image' => 'null',
+                'description' => 'Joining hands for a green, clean and beautiful environment',
+                'status' => 'no clean',
             ]
         );
-            
+
     }
 }

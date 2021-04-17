@@ -3,16 +3,15 @@
 namespace App\Http\Controllers\USer;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use \Firebase\JWT\JWT;
-use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use \Firebase\JWT\JWT;
 
 class ProfileController extends Controller
 {
-    function getProfile()
+    public function getProfile()
     {
         $token = request()->header("Authorization");
         $key = "minionroo";
@@ -22,7 +21,7 @@ class ProfileController extends Controller
         $responData = array("user" => $user);
         return response()->json($responData, 200);
     }
-    function checkPassword(Request $request)
+    public function checkPassword(Request $request)
     {
         $id_user = $request->id;
         $oldPass = $request->oldPass;
@@ -33,14 +32,14 @@ class ProfileController extends Controller
         $user = User::where('id', $data->user_id)->first();
 
         $check = array(
-            "email"=>$user->email,
-            "password"=>$oldPass
+            "email" => $user->email,
+            "password" => $oldPass,
         );
         if (Auth::attempt($check)) {
 
-          $user->password=$hasPass;
-          $user->save();
-        return 200;
+            $user->password = $hasPass;
+            $user->save();
+            return 200;
         } else {
             return 400;
         }
