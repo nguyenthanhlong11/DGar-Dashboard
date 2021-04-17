@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 use App\Models\SharingPost;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class SharingPostController extends Controller
 {
     public function getList()
     {
-        $posts=SharingPost::all();
+        $posts = DB::table('sharing_posts')
+        ->join('users','sharing_posts.id','=','users.id')
+        ->select('users.name','users.image','sharing_posts.*')
+        ->get();
         return $posts;
        
     }
