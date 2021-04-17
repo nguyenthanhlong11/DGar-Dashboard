@@ -52,13 +52,13 @@ Route::get("/users/countPosts",[UserController::class,"countPosts"]);
 Route::get("/trash/getListTrash",[BinLocationController::class,"getList"]);
 Route::get("/trash/viewTrash/{id}",[BinLocationController::class,"viewTrash"]);
 
-// Posts
+// SharingPosts
 Route::get("/posts/getListPosts",[SharingPostController::class,"getList"]);
 Route::get("/posts/viewPosts/{id}",[SharingPostController::class,"viewPost"]);
-Route::post("/posts/addPost",[SharingPostController::class,"addPost"]);
+Route::post("/posts/addPost/{id}",[SharingPostController::class,"addPost"]);
 Route::delete("/posts/deletePost/{id}",[SharingPostController::class,"deletePost"]);
 
-// Reports
+// WarningPost
 Route::get("/reports/getListPosts",[WarningPostController::class,"getList"]);
 Route::get("/reports/viewPosts/{id}",[WarningPostController::class,"viewPost"]);
 Route::post("/reports/addPost",[WarningPostController::class,"addPost"]);

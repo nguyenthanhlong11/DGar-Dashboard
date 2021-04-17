@@ -38,5 +38,6 @@ class SharingPostController extends Controller
         $post=SharingPost::find($id);
         $post->delete();
         return "deleted!";
+    
     }
 }

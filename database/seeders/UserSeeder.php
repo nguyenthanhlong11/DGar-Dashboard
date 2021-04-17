@@ -34,14 +34,24 @@ class UserSeeder extends Seeder
                 'role'=>'admin'
             ]); 
             DB::table("users")->insert(
-                [
-                    'email'=>'user@gmail.com',
-                    'username'=>'user3',
-                    'password'=>bcrypt("user123"),
-                    'name'=>'Mian Mai',
-                    'address'=>'101b Le Huu Trac, Da Nang',
-                    'image'=>'null',
-                    'role'=>'user'
-                ]);
+            [
+                'email'=>'user@gmail.com',
+                'username'=>'user3',
+                'password'=>bcrypt("user123"),
+                'name'=>'Mian Mai',
+                'address'=>'101b Le Huu Trac, Da Nang',
+                'image'=>'null',
+                'role'=>'user'
+            ]);
+            DB::table("users")->insert(
+            [
+                'email'=>'long@gmail.com',
+                'username'=>'user4',
+                'password'=>bcrypt("user123"),
+                'name'=>'Thanh Long',
+                'address'=>'101b Le Huu Trac, Da Nang',
+                'image'=>'long.png',
+                'role'=>'user'
+            ]);
     }
 }
