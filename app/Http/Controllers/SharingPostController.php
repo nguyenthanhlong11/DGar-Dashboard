@@ -29,6 +29,7 @@ class SharingPostController extends Controller
     {
         $post = new SharingPost();
         $post->user_id = $id;
+        $post->address = $request->address;
         $post->content = $request->content;
         $post->image = $request->image;
         $post->save();
