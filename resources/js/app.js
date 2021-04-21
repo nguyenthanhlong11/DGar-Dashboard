@@ -9,6 +9,8 @@ import Dashboard from './components/Content/Dashboard.vue';
 import UserScanner from './components/Content/UserScanner.vue';
 import NewPost from './components/Content/NewPost.vue';
 import App from './components/App.vue';
+import BinLocation from './components/Content/BinLocation.vue';
+import Warning from './components/Content/Warning.vue';
 
 const routes = [{
         name: 'dashboard',
@@ -25,6 +27,17 @@ const routes = [{
         path: '/new-post',
         component: NewPost
     },
+    {
+        name: 'bin-location',
+        path: '/bin-location',
+        component: BinLocation
+    },
+    {
+        name: 'warning',
+        path: '/warning',
+        component: Warning
+    },
+
 
 ];
 
