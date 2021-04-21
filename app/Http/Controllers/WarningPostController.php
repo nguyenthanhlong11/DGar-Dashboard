@@ -16,7 +16,7 @@ class WarningPostController extends Controller
 
     public function viewPost($id)
     {
-        $post = WarningPost:where('user_id', $id)->get();
+        $post = WarningPost::where('user_id', $id)->get();
         return $post;
     }
 
