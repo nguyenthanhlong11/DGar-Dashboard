@@ -16,6 +16,7 @@ class CreateNotifyTypesTable extends Migration
         Schema::create('notify_types', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('type_name');
+            $table->string('content');
             $table->string('image')->default('null');
             $table->timestamps();
         });

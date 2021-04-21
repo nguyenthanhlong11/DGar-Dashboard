@@ -23,8 +23,8 @@ class WarningPostController extends Controller
 
     public function addPost(Request $request)
     {
-        $post = new WarningPost();
-        $post->user_id = 1;
+        $post = new WarningPost();       
+        $post->user_id = $request->user_id;
         $post->address = $request->address;
         $post->level = $request->level;
         $post->image = $request->image;

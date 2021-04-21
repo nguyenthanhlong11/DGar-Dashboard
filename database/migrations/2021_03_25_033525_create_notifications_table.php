@@ -17,7 +17,6 @@ class CreateNotificationsTable extends Migration
             $table->id()->autoIncrement();
             $table->unsignedBigInteger("user_id");
             $table->unsignedBigInteger("notify_type_id");
-            $table->string('content');
             $table->string('note');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
