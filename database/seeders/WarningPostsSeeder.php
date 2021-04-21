@@ -19,7 +19,7 @@ class WarningPostsSeeder extends Seeder
                 'user_id' => '2',
                 'address' => '99 To Hien Thanh, Da Nang',
                 'level' => 'low',
-                'image' => 'null',
+                'image' => 'https://cdn.pixabay.com/photo/2021/04/14/07/03/newborn-6177485_960_720.jpg',
                 'description' => 'Joining hands for a green, clean and beautiful environment',
                 'status' => 'no clean',
             ],
@@ -27,7 +27,7 @@ class WarningPostsSeeder extends Seeder
                 'user_id' => '2',
                 'address' => '99 To Hien Thanh, Da Nang',
                 'level' => 'low',
-                'image' => 'null',
+                'image' => 'https://cdn.pixabay.com/photo/2020/06/20/11/08/cat-5320568_1280.jpg',
                 'description' => 'Joining hands for a green, clean and beautiful environment',
                 'status' => 'no clean',
             ]
