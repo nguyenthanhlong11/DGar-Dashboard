@@ -60,7 +60,7 @@ Route::delete("/posts/deletePost/{id}", [SharingPostController::class, "deletePo
 // WarningPost
 Route::get("/reports/getListPosts", [WarningPostController::class, "getList"]);
 Route::get("/reports/viewPosts/{id}", [WarningPostController::class, "viewPost"]);
-Route::post("/reports/addPost", [WarningPostController::class, "addPost"]);
+Route::post("/reports/addPost/{id}", [WarningPostController::class, "addPost"]);
 Route::delete("/reports/deletePost/{id}", [WarningPostController::class, "deletePost"]);
 Route::get("/reports/getPostMonth", [WarningPostController::class, "getPostMonth"]);
 
