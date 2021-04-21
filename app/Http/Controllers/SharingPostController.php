@@ -11,7 +11,7 @@ class SharingPostController extends Controller
     public function getList()
     {
         $posts = DB::table('sharing_posts')
-            ->join('users', 'sharing_posts.id', '=', 'users.id')
+            ->join('users', 'sharing_posts.user_id', '=', 'users.id')
             ->select('users.name', 'users.image', 'sharing_posts.*')
             ->get();
         return $posts;
