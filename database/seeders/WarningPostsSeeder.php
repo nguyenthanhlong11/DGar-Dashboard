@@ -19,17 +19,33 @@ class WarningPostsSeeder extends Seeder
                 'user_id' => '2',
                 'address' => '99 To Hien Thanh, Da Nang',
                 'level' => 'low',
-                'image' => 'https://cdn.pixabay.com/photo/2021/04/14/07/03/newborn-6177485_960_720.jpg',
+                'image' => 'https://images.pexels.com/photos/4107120/pexels-photo-4107120.jpeg?cs=srgb&dl=pexels-cottonbro-4107120.jpg&fm=jpg',
                 'description' => 'Joining hands for a green, clean and beautiful environment',
                 'status' => 'no clean',
             ],
             [
-                'user_id' => '2',
+                'user_id' => '1',
                 'address' => '99 To Hien Thanh, Da Nang',
                 'level' => 'low',
-                'image' => 'https://cdn.pixabay.com/photo/2020/06/20/11/08/cat-5320568_1280.jpg',
+                'image' => 'https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?cs=srgb&dl=pexels-cottonbro-4108715.jpg&fm=jpg',
                 'description' => 'Joining hands for a green, clean and beautiful environment',
                 'status' => 'no clean',
+            ],
+            [
+                'user_id' => '3',
+                'address' => '99 To Hien Thanh, Da Nang',
+                'level' => 'height',
+                'image' => 'https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4239091.jpg&fm=jpg',
+                'description' => 'Joining hands for a green, clean and beautiful environment',
+                'status' => 'Cleaned',
+            ],
+            [
+                'user_id' => '4',
+                'address' => '99 To Hien Thanh, Da Nang',
+                'level' => 'height',
+                'image' => 'https://images.pexels.com/photos/4239031/pexels-photo-4239031.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                'description' => 'Joining hands for a green, clean and beautiful environment',
+                'status' => 'Cleaned',
             ]
         );
 

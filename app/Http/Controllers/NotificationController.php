@@ -12,7 +12,7 @@ class NotificationController extends Controller
         $notifications = DB::table('notifications')
             ->join('users', 'notifications.id', '=', 'users.id')
             ->join('notify_types', 'notifications.id', '=', 'notify_types.id')
-            ->select('users.name', 'users.image', 'notify_types.type_name', 'notify_types.image', 'notifications.*')
+            ->select('users.name', 'users.image', 'notify_types.type_name', 'notify_types.content', 'notify_types.image', 'notifications.*')
             ->get();
         return $notifications;
     }
