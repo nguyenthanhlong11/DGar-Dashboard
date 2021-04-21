@@ -20,8 +20,9 @@ class SharingPostController extends Controller
 
     public function viewPost($id)
     {
-        $post = SharingPost::find($id);
+        $post = SharingPost::where('user_id', $id)->get();
         return $post;
+
 
     }
 
