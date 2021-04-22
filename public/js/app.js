@@ -2197,8 +2197,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -58774,9 +58772,7 @@ var render = function() {
               _vm._v(" "),
               _c("td", [_vm._v(_vm._s(warnings.description))]),
               _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(warnings.status))]),
-              _vm._v(" "),
-              _vm._m(1, true)
+              _c("td", [_vm._v(_vm._s(warnings.status))])
             ])
           }),
           0
@@ -58794,7 +58790,7 @@ var staticRenderFns = [
       _c("tr", [
         _c("th", { attrs: { scope: "col" } }, [_vm._v("ID")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("ID User")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Id user")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Address")]),
         _vm._v(" "),
@@ -58804,26 +58800,9 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Status")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-outline-danger",
-              attrs: { type: "button" }
-            },
-            [_vm._v("Delete")]
-          )
-        ])
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Status")])
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [_c("i", { staticClass: "fas fa-trash" })])
   }
 ]
 render._withStripped = true
