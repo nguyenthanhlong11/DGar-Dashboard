@@ -14,6 +14,7 @@ class CreateSchedulesTable extends Migration
     public function up()
     {
         Schema::create('schedules', function (Blueprint $table) {
+            $table->increments('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('post_id');
             $table->string('start_day');
@@ -22,7 +23,6 @@ class CreateSchedulesTable extends Migration
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('post_id')->references('id')->on('warning_posts')->onDelete('cascade');
-            $table->primary(['user_id', "post_id"]);
         });
     }
 
