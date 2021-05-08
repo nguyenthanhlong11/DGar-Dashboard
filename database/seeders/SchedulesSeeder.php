@@ -20,6 +20,7 @@ class SchedulesSeeder extends Seeder
             'start_day' => '23/02/2021',
             'end_day' => '25/03/2021',
             'note' => 'null',
+            'status' => 'Doing',
         ]);
     }
 }
