@@ -8,6 +8,8 @@ use App\Http\Controllers\SharingPostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\WarningPostController;
+use App\Http\Controllers\AppointmentController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
