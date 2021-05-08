@@ -68,3 +68,7 @@ Route::get("/reports/getPostMonth", [WarningPostController::class, "getPostMonth
 Route::get("/notifications/getListNotifications", [NotificationController::class, "getList"]);
 Route::get("/notifications/viewNotification/{id}", [NotificationController::class, "viewNotification"]);
 Route::delete("/notifications/deleteNotification/{id}", [NotificationController::class, "deleteNotification"]);
+
+//Appointment
+Route::get("/appointment/getListAppoint", [AppointmentController::class, "getListAppoint"]);
+Route::post("/appointment/addAppointment/{id}", [AppointmentController::class, "addAppointment"]);
