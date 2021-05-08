@@ -13,7 +13,7 @@ class AppointmentController extends Controller
         $appointment = DB::table('schedules')
             ->join('users', 'schedules.user_id', '=', 'users.id')
             ->join('warning_posts', 'schedules.post_id', '=', 'warning_posts.id' )
-            ->select('users.name', 'users.image', 'warning_posts.address','warning_posts.image', 'sharing_posts.*')
+            ->select('users.name', 'users.image', 'warning_posts.address','warning_posts.image', 'schedules.*')
             ->get();
         return $appointment;
 
