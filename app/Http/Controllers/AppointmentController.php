@@ -18,11 +18,10 @@ class AppointmentController extends Controller
         return $appointment;
 
     }
-    public function addAppointment(Request $request, $id_user, $id_report)
+    public function addAppointment(Request $request, $id)
     {
         $appointment = new Appointment();
-        $appointment->user_id = $id_user;
-        $appointment->report_id = $id_report;
+        $appointment->id = $id;
         $appointment->start_day = $request->start_day;
         $appointment->end_day = $request->end_day;
         $appointment->note = $request->note;
