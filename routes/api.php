@@ -73,4 +73,4 @@ Route::delete("/notifications/deleteNotification/{id}", [NotificationController:
 
 //Appointment
 Route::get("/appointment/getListAppoint", [AppointmentController::class, "getListAppoint"]);
-Route::post("/appointment/addAppointment/{id}", [AppointmentController::class, "addAppointment"]);
+Route::post("/appointment/addAppointment", [AppointmentController::class, "addAppointment"]);
