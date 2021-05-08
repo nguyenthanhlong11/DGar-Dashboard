@@ -20,6 +20,7 @@ class CreateSchedulesTable extends Migration
             $table->string('start_day');
             $table->string('end_day');
             $table->string('note');
+            $table->string('status');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('post_id')->references('id')->on('warning_posts')->onDelete('cascade');

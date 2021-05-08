@@ -26,6 +26,7 @@ class AppointmentController extends Controller
         $appointment->start_day = $request->start_day;
         $appointment->end_day = $request->end_day;
         $appointment->note = $request->note;
+        $appointment->status = $request->status;
         $appointment->save();
         return response()->json($appointment,200);
     }
