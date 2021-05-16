@@ -28,7 +28,7 @@ class LoginController extends Controller
                 return response()->json($responData, 200);
                 }
                 else{
-                return 401;
+                return 400;
                 }
                 else{
                 return 400;

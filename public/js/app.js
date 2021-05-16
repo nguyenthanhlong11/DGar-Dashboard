@@ -2101,20 +2101,16 @@ __webpack_require__.r(__webpack_exports__);
         username: this.username,
         password: this.password
       }).then(function (response) {
-        if (response.data.message) {
-          alert("haha");
+        if (response.data.user_id && response.data.user_id != "") {
+          localStorage.setItem("id_user", response.data.user_id);
+          alert("Login successful!");
+          location.reload();
         } else {
-          if (response.data.user_id && response.data.user_id != "") {
-            localStorage.setItem("id_user", response.data.user_id);
-            alert("Login successful!");
-            location.reload();
-          } else {
-            alert("Username or password is incorrect!");
+          alert("Username or password is incorrect!");
 
-            _this.$router.push('/');
+          _this.$router.push('/');
 
-            location.reload();
-          }
+          location.reload();
         }
       })["catch"](function (error) {
         console.log(error);

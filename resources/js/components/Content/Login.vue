@@ -39,9 +39,6 @@ export default {
           password: this.password
         })
         .then(response => {
-          if (response.data.message) {
-            alert("haha");
-          } else {
             if (response.data.user_id && response.data.user_id != "") {
               localStorage.setItem("id_user", response.data.user_id);
               alert("Login successful!");
@@ -51,8 +48,6 @@ export default {
               this.$router.push('/');
               location.reload();
             }
-
-          }
         }).catch(error => {
           console.log(error);
         })
