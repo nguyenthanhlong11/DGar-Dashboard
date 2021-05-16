@@ -2097,20 +2097,26 @@ __webpack_require__.r(__webpack_exports__);
     login: function login() {
       var _this = this;
 
-      axios.post('https://d-gar.herokuapp.com/api/auth/signin', {
+      axios.post('https://dashboard.heroku.com/api/auth/signin', {
         username: this.username,
         password: this.password
       }).then(function (response) {
-        if (response.data.user_id && response.data.user_id != "") {
-          localStorage.setItem("id_user", response.data.user_id);
-          alert("Login successful!");
-          location.reload();
+        console.log(response.data.message);
+
+        if (response.data.message && response.data.message != "") {
+          alert(response.data.message);
         } else {
-          alert("Username or password is incorrect!");
+          if (response.data.user_id && response.data.user_id != "") {
+            localStorage.setItem("id_user", response.data.user_id);
+            alert("Login successful!");
+            location.reload();
+          } else {
+            alert("Username or password is incorrect!");
 
-          _this.$router.push('/');
+            _this.$router.push('/');
 
-          location.reload();
+            location.reload();
+          }
         }
       })["catch"](function (error) {
         console.log(error);
