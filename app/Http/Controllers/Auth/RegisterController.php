@@ -46,10 +46,6 @@ class RegisterController extends Controller
             if (Auth::attempt($credentials)) {
                 $user = Auth::user();
                 $user_id = $user->id;
-                // $key="minionroo";
-                // $data = array(
-                //     "user_id"=>$user_id
-                // ) ;
                 $responData = array("user_id" => $user_id);
                 return response()->json($responData, 200);
             } else {
