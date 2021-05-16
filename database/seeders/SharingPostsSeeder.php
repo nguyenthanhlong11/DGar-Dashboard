@@ -17,16 +17,16 @@ class SharingPostsSeeder extends Seeder
         DB::table("sharing_posts")->insert(
             [
                 'user_id' => 1,
-                'address' => '99 To Hien Thanh, Da Nang',
+                'title' => 'Green City',
                 'content' => 'Joining hands for a green, clean and beautiful environment',
                 'image' => 'https://cdn.pixabay.com/photo/2021/04/14/07/03/newborn-6177485_960_720.jpg',
             ]);
         DB::table("sharing_posts")->insert(
             [
                 'user_id' => 1,
-                'address' => '99 To Hien Thanh, Da Nang',
+                'title' => 'Protect Environment',
                 'content' => 'Joining hands for a green, clean and beautiful environment',
-                'image' => '    ',
+                'image' => 'https://cdn.pixabay.com/photo/2021/04/14/07/03/newborn-6177485_960_720.jpg',
             ]);
     }
 }

@@ -5,7 +5,6 @@
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Id user</th>
           <th scope="col">Address</th>
           <th scope="col">Level</th>
           <th scope="col">Image</th>
@@ -16,7 +15,6 @@
       <tbody>
         <tr v-for="warnings in warnings" :key="warnings">
           <td>{{warnings.id}}</td>
-          <td>{{warnings.user_id}}</td>
           <td>{{warnings.address}}</td>
           <td>{{warnings.level}}</td>
           <td>{{warnings.image}}</td>

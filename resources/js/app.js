@@ -12,33 +12,32 @@ import App from './components/App.vue';
 import BinLocation from './components/Content/BinLocation.vue';
 import Warning from './components/Content/Warning.vue';
 
-const routes = [{
+const routes = [
+    {
         name: 'dashboard',
-        path: '/',
+        path: 'dashboard',
         component: Dashboard
     },
     {
         name: 'user-scanner',
-        path: '/user-scanner',
+        path: '/admin/user-scanner',
         component: UserScanner
     },
     {
         name: 'new-post',
-        path: '/new-post',
+        path: '/admin/new-post',
         component: NewPost
     },
     {
         name: 'bin-location',
-        path: '/bin-location',
+        path: '/admin/bin-location',
         component: BinLocation
     },
     {
         name: 'warning',
-        path: '/warning',
+        path: '/admin/warning',
         component: Warning
     },
-
-
 ];
 
 const router = new VueRouter({ mode: 'history', routes: routes });

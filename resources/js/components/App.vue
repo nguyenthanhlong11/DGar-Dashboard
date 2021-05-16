@@ -1,31 +1,37 @@
 <template>
-<div id="appadmin">
-  <Sidebar />
-  <div class="w3-main" style="margin-left:300px">
-    <div class="w3-row-padding w3-margin-bottom">
-      <Header />
-      <div class="container text-center">
-        <router-view></router-view>
-      </div>
+  <div id="appadmin" >
+    <div v-if="id_user==''">
+      <Login/>
     </div>
-  </div>
-</div>
+    <div v-else>
+     <Page/>
+    </div>
+  </div> 
 </template>
 
 <script>
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
+import Login from './Content/Login';
+import Page from './Page';
 
 export default {
-  name: 'appadmin',
-  data() {
+   data() {
     return {
-      msg: 'Hello Vuejs'
+      id_user: ''
+    }
+  },
+   mounted() {
+    this.getIDUser();
+  },
+  methods: {
+    getIDUser(){
+      if(localStorage.getItem("id_user") && localStorage.getItem("id_user")!=''){
+        this.id_user=localStorage.getItem("id_user");
+      }
     }
   },
   components: {
-    Header,
-    Sidebar
+    Login,
+    Page
   }
 }
 </script>

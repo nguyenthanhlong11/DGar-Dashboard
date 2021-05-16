@@ -45,10 +45,9 @@ Route::get("/users/viewProfile/{id}", [UserController::class, "viewProfile"]);
 Route::get("/users/editProfile/{id}", [UserController::class, "editProfile"]);
 Route::post("/users/updateProfile/{id}", [UserController::class, "updateProfile"]);
 Route::post("/users/changePassword/{id}", [UserController::class, "changePassword"]);
-
+Route::delete("/users/deleteUser/{id}", [UserController::class, "deleteUser"]);
 // --countPosts
 Route::get("/users/countPosts", [UserController::class, "countPosts"]);
-
 // Trash
 Route::get("/trash/getListTrash", [BinLocationController::class, "getList"]);
 Route::get("/trash/viewTrash/{id}", [BinLocationController::class, "viewTrash"]);

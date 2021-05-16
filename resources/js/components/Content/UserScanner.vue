@@ -15,14 +15,13 @@
           <td><i class="fas fa-user-circle"></i>{{users.name}}</td>
           <td>{{users.email}}</td>
           <td>{{users.total_posts}}</td>
-          <td><i class="fas fa-trash"></i></td>
+          <td><button @click="deleteUser(users.id)"><i class="fas fa-trash"></i></button></td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 </template>
-
 <script>
 import axios from 'axios'
 export default {
@@ -31,15 +30,26 @@ export default {
       users: [],
     }
   },
-  mounted() {
-    this.getUser();
+ // mounted() {
+    //this.getUser();
+  //},
+  created(){
+      this.getUser();
   },
   methods: {
     getUser() {
       axios.get('http://127.0.0.1:8000/api/users/countPosts')
         .then(response => (this.users = response.data))
         .catch(error => console.log(error))
-    }
+    },
+    deleteUser(id)
+    {
+      axios.delete('http://127.0.0.1:8000/api/users/deleteUser/'+id)
+      .then(response => (this.accounts = response.data))
+        .catch(error => console.log(error));
+        alert("Delete user successfully!");
+        // location.reload();
+    }, 
   }
 }
 </script>

@@ -16,7 +16,7 @@ class CreateSharingPostsTable extends Migration
         Schema::create('sharing_posts', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->unsignedBigInteger("user_id");
-            $table->string('address');
+            $table->string('title');
             $table->string('content');
             $table->string('image')->default("null");
             $table->timestamps();

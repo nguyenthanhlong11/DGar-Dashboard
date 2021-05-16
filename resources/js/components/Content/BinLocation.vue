@@ -8,7 +8,6 @@
           <th scope="col">Name</th>
           <th scope="col">Longtitue</th>
           <th scope="col">Latitude</th>
-          <th scope="col"><button type="button" class="btn btn-outline-danger">Delete</button></th>
         </tr>
       </thead>
       <tbody>
@@ -17,7 +16,6 @@
           <td>{{bins.name}}</td>
           <td>{{bins.longitude}}</td>
           <td>{{bins.latitude}}</td>
-          <td><i class="fas fa-trash"></i></td>
         </tr>
       </tbody>
     </table>
@@ -35,6 +33,7 @@ export default {
   },
   mounted() {
     this.getUser();
+    this.deleteBinLocation();
   },
   methods: {
     getUser() {

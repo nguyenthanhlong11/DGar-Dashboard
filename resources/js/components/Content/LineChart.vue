@@ -6,7 +6,7 @@ import {
 export default {
   extends: Line,
   mounted() {
-    axios.get('http://127.0.0.1:8000/api/reports/getPostMonth').then(res => {
+    axios.get('https://d-gar.herokuapp.com/api/reports/getPostMonth').then(res => {
       const location = res.data;
 
       this.renderChart({

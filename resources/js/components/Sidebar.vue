@@ -12,7 +12,7 @@
         <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" class="w3-circle w3-margin-right" style="width:30px">
       </div>
       <div class="w3-col s8 w3-bar">
-        Welcome, <strong>Admin</strong><br /><br />
+        Welcome, <strong>{{user.username}}</strong><br /><br />
       </div>
     </div>
     <hr>
@@ -23,9 +23,8 @@
       <router-link :to="{ name: 'warning' }" class="w3-bar-item w3-button w3-padding"><i class="fa fa-info-circle"></i> Warning </router-link>
       <router-link :to="{ name: 'bin-location' }" class="w3-bar-item w3-button w3-padding"><i class="fa fa-location-arrow"></i> Bin location </router-link>
       <router-link :to="{ name: '' }" class="w3-bar-item w3-button w3-padding"><i class="fa fa-info-circle"></i> Info </router-link>
-      <router-link :to="{ name: '' }" class="w3-bar-item w3-button w3-padding"><i class="fas fa-sign-out-alt"></i> Log out </router-link>
+      <button @click.prevent="logout" class="w3-bar-item w3-button w3-padding"><i class="fas fa-sign-out-alt"></i> Log out </button>
     </div>
-
     <div>
       <button class="btn-download"><i class="fa fa-download"></i> Download</button>
     </div>
@@ -36,6 +35,27 @@
 
 <script>
 export default {
-
-}
+   data() {
+    return {
+      user: "",
+    }
+  },
+   mounted() {
+    this.getUser();
+  },
+		methods: {
+      getUser(){
+        axios.get('https://d-gar.herokuapp.com/api/users/viewProfile/'+localStorage.getItem("id_user"))
+        .then(response => (this.user = response.data))
+        .catch(error => console.log(error)) 
+      },
+			logout(){
+			 var r = confirm("Are you sure?");
+        if (r == true) {
+          localStorage.removeItem("id_user");
+          this.$router.push('/');
+          location.reload();
+        } 
+          }}
+	}
 </script>
