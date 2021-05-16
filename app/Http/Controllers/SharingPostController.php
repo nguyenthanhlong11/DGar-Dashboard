@@ -12,18 +12,15 @@ class SharingPostController extends Controller
     {
         $posts = DB::table('sharing_posts')
             ->join('users', 'sharing_posts.user_id', '=', 'users.id')
-            ->select('users.name', 'users.image', 'sharing_posts.*')
+            ->select('users.name', 'users.image as avatar', 'sharing_posts.*')
             ->get();
         return $posts;
-
     }
 
     public function viewPost($id)
     {
         $post = SharingPost::where('user_id', $id)->get();
         return $post;
-
-
     }
 
     public function addPost(Request $request, $id)
@@ -42,6 +39,5 @@ class SharingPostController extends Controller
         $post = SharingPost::find($id);
         $post->delete();
         return "deleted!";
-
     }
 }
