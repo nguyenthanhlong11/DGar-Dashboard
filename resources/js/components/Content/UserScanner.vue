@@ -38,16 +38,16 @@ export default {
   },
   methods: {
     getUser() {
-      axios.get('http://127.0.0.1:8000/api/users/countPosts')
+      axios.get('https://d-gar.herokuapp.com/api/users/countPosts')
         .then(response => (this.users = response.data))
         .catch(error => console.log(error))
     },
     deleteUser(id)
     {
-      axios.delete('http://127.0.0.1:8000/api/users/deleteUser/'+id)
+      axios.delete('https://d-gar.herokuapp.com/api/users/deleteUser/'+id)
       .then(response => (this.accounts = response.data))
         .catch(error => console.log(error));
-        alert("Delete user successfully!");
+        alert("Đã xóa!");
         // location.reload();
     }, 
   }
