@@ -54,5 +54,15 @@ class UserSeeder extends Seeder
                 'image' => 'long.png',
                 'role' => 'user',
             ]);
+            DB::table("users")->insert(
+                [
+                    'email' => 'thanhlong@gmail.com',
+                    'username' => 'thanhlong',
+                    'password' => bcrypt("thanhlong"),
+                    'name' => 'Thanh Long',
+                    'address' => '101b Le Huu Trac, Da Nang',
+                    'image' => 'long.png',
+                    'role' => 'user',
+                ]);
     }
 }
