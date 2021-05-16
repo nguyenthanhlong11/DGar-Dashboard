@@ -30,44 +30,36 @@
 </div>
 </template>
 
-<script type="text/javascript">
-  export default {
-    methods: {
-      login(){
-        axios.post('https://dashboard.heroku.com/api/auth/signin',{
+<script>
+export default {
+  methods: {
+    login() {
+      axios.post('https://d-gar.herokuapp.com/api/auth/signin', {
           username: this.username,
           password: this.password
         })
         .then(response => {
-          console.log(response.data.message);
-          if(response.data.message && response.data.message!=""){
-            alert(response.data.message);
-          }
-          else{
-          if(response.data.user_id && response.data.user_id!=""){
-            localStorage.setItem("id_user", response.data.user_id);
-            alert("Login successful!");
-            location.reload();
+            if (response.data.user_id && response.data.user_id != "") {
+              localStorage.setItem("id_user", response.data.user_id);
+              alert("Login successful!");
+              location.reload();
+            } else {
+              alert("Username or password is incorrect!");
+              this.$router.push('/');
+              location.reload();
             }
-          else{
-            alert("Username or password is incorrect!");
-            this.$router.push('/');
-            location.reload();
-          }
-          }
-          
         }).catch(error => {
           console.log(error);
         })
-      }
-    },
-    data(){
-      return {
-        username: "",
-        password: ""
-      }
+    }
+  },
+  data() {
+    return {
+      username: "",
+      password: ""
     }
   }
+}
 </script>
 
 <style scoped>
