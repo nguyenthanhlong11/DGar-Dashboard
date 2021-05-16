@@ -2226,7 +2226,7 @@ __webpack_require__.r(__webpack_exports__);
     getUser: function getUser() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://127.0.0.1:8000/api/users/countPosts').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('https://d-gar.herokuapp.com/api/users/countPosts').then(function (response) {
         return _this.users = response.data;
       })["catch"](function (error) {
         return console.log(error);
@@ -2235,12 +2235,12 @@ __webpack_require__.r(__webpack_exports__);
     deleteUser: function deleteUser(id) {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().delete('http://127.0.0.1:8000/api/users/deleteUser/' + id).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().delete('https://d-gar.herokuapp.com/api/users/deleteUser/' + id).then(function (response) {
         return _this2.accounts = response.data;
       })["catch"](function (error) {
         return console.log(error);
       });
-      alert("Delete user successfully!"); // location.reload();
+      alert("Đã xóa!"); // location.reload();
     }
   }
 });

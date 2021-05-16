@@ -22,17 +22,19 @@ class LoginController extends Controller
         $credentials = $request->only('username', 'password');
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
-            $user_id = $user->id;
-            // $key = "minionroo";
-            // $data = array(
-            //     "user_id" => $user_id,
-            // );
-            $responData = array("user_id" => $user_id);
-            return response()->json($responData, 200);
-        } else {
-            return 400;
-        }
-    }
+            if($user ->role=="admin"){
+                $user_id=$user->id;
+                $responData= array("user_id" => $user_id);
+                return response()->json($responData, 200);
+                }
+                else{
+                return 400;
+                }
+                else{
+                return 400;
+                }
+            
+            }
 
     public function logout(Request $request)
     {
