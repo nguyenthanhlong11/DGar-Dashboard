@@ -2102,7 +2102,7 @@ __webpack_require__.r(__webpack_exports__);
         password: this.password
       }).then(function (response) {
         if (response.data.message) {
-          alert(response.data.message);
+          alert("haha");
         } else {
           if (response.data.user_id && response.data.user_id != "") {
             localStorage.setItem("id_user", response.data.user_id);
