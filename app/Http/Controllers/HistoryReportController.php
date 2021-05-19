@@ -27,3 +27,4 @@ class HistoryReportController extends Controller
         return $data;
     }
 }
+

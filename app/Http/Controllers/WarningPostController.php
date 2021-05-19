@@ -42,15 +42,30 @@ class WarningPostController extends Controller
 
     public function getPostMonth()
     {
-        $post = WarningPost::select(WarningPost::raw('MONTH(created_at) as month'), WarningPost::raw('COUNT(id) as sum'))
-            ->groupBy('month')->get();
-        $post_month = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        foreach ($post as $post) {
-            for ($i = 1; $i <= 12; $i++) {
-                if ($i == $post["month"]) {
-                    $post_month[$i - 1] = $post["sum"];
+        // $post = WarningPost::select(WarningPost::raw("TO_CHAR(created_at, 'MON') as month"), WarningPost::raw('COUNT(id) as sum'))
+        //     ->groupBy('month')->get();
+        // $post_month = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        // foreach ($post as $post) {
+        //     for ($i = 1; $i <= 12; $i++) {
+        //         if ($i == $post["month"]) {
+        //             $post_month[$i - 1] = $post["sum"];
+        //         }
+        //     }
+        // }
+        // return $post_month;
+
+
+
+        $post = WarningPost::select(WarningPost::raw("TO_CHAR(created_at, 'MON') as month"), WarningPost::raw('COUNT(id) as sum'))
+            ->groupBy('month')->get();     
+         $post_month = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        $armonth = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+        foreach ($story as $story) {
+            for ($i = 0; $i <= 11; $i++) {
+                if ($armonth[$i] == $post["month"]) {
+                    $post_month[$i] = $post["sum"];
                 }
-            }
+            } 
         }
         return $post_month;
     }
