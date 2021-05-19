@@ -55,7 +55,7 @@ class WarningPostController extends Controller
         // return $post_month;
         $posts = WarningPost::select(WarningPost::raw("TO_CHAR(created_at, 'MON') as month"), WarningPost::raw('COUNT(id) as sum'))
             ->groupBy('month')->get();     
-         $post_month = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        $post_month = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         $armonth = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
         foreach ($posts as $post) {
             for ($i = 0; $i <= 11; $i++) {
