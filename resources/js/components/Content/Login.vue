@@ -1,5 +1,5 @@
 <template>
-<div class="login-box">
+<div class="login-box1">
   <div class="login-box-body">
     <div class="login-logo">
       <img src="https://images.pexels.com/photos/1162361/pexels-photo-1162361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" width="30%" alt="logo">
@@ -63,21 +63,11 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+.login-box1{
+  background-color: red ;
+  width: 500px;  
+  display:inline-block;
+  text-align:center;
 }
 </style>
