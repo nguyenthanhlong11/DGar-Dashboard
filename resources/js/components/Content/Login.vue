@@ -1,5 +1,5 @@
 <template>
-<div class="login-box1">
+<div :style="loginbox1">
   <div class="login-box-body">
     <div class="login-logo">
       <img src="https://images.pexels.com/photos/1162361/pexels-photo-1162361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" width="30%" alt="logo">
@@ -39,15 +39,15 @@ export default {
           password: this.password
         })
         .then(response => {
-            if (response.data.user_id && response.data.user_id != "") {
-              localStorage.setItem("id_user", response.data.user_id);
-              alert("Login successful!");
-              location.reload();
-            } else {
-              alert("Username or password is incorrect!");
-              this.$router.push('/');
-              location.reload();
-            }
+          if (response.data.user_id && response.data.user_id != "") {
+            localStorage.setItem("id_user", response.data.user_id);
+            alert("Login successful!");
+            location.reload();
+          } else {
+            alert("Username or password is incorrect!");
+            this.$router.push('/');
+            location.reload();
+          }
         }).catch(error => {
           console.log(error);
         })
@@ -55,6 +55,10 @@ export default {
   },
   data() {
     return {
+      loginbox1: {
+        width: '500px',
+        textAlign: 'center',
+      },
       username: "",
       password: ""
     }
@@ -62,12 +66,3 @@ export default {
 }
 </script>
 
-<style scoped>
-
-.login-box1{
-  background-color: red ;
-  width: 500px;  
-  display:inline-block;
-  text-align:center;
-}
-</style>

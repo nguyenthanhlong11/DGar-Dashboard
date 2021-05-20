@@ -13,6 +13,11 @@ import BinLocation from './components/Content/BinLocation.vue';
 import Warning from './components/Content/Warning.vue';
 
 const routes = [
+    { 
+        path: '/:catchAll(.*)', 
+        component: Dashboard,
+        name: 'NotFound'
+    },
     {
         name: 'dashboard',
         path: 'dashboard',

@@ -17,7 +17,9 @@
           <td>{{warnings.id}}</td>
           <td>{{warnings.address}}</td>
           <td>{{warnings.level}}</td>
-          <td>{{warnings.image}}</td>
+          <td>
+            <img v-bind:src="warnings.image" style="width:200px;"/>
+          </td>
           <td>{{warnings.description}}</td>
           <td>{{warnings.status}}</td>
         </tr>

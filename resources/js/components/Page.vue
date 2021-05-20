@@ -5,7 +5,11 @@
     <div class="w3-row-padding w3-margin-bottom">
       <Header />
       <div class="container text-center">
-        <router-view></router-view>
+        <transition>
+          <keep-alive>
+            <router-view></router-view>
+          </keep-alive>
+        </transition>
       </div>
     </div>
   </div>
@@ -15,7 +19,6 @@
 <script>
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
-
 export default {
   name: 'appadmin',
   data() {
